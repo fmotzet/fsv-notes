@@ -97,3 +97,51 @@ ABER:
   + Probery-directed Testing
   + Modellbasiertes Testen
   + Kobination von manuellen und autmatischen Test- und Verifikationstechniken haben die besten chancen auf hohe Codequalität
+
+### Unit-Testen
+
++ Überprüfung einzelner Code-einheiten in Isolation
++ Test-Case: welcher Code, korekte Eingabe, erwartete Aisgabe
++ Test-Suit: Menge von Test-Cases (für eine Unit)
++ Fixture: Initialisierung der Umgebung
++ Automatisierte Ausführung der Test-Suits/Cases
++ Generierung eines Test-Reports
++ "test before you commit"
++ gegebenfalls Doku notwendig
++ EFFEKTIV: Tests sollen so vile Fehler wie möglich finden
++ EFFIZIENT: größte Anzahl an fehlern mit geringster Anzahl an Tests
++ Source-Code nicht notwendig
++Komplexe Szenarien möglich: genaue Beschreibung der erwarteten Ergebnisse
++ Einfach umsetzten & zu automatiseren
+Fängt Regresseionen ab (neue Fehler)
++ ABER:
+  + unklar, wie viel Code überprüft wurde
+  + manueller Aufwand
+  + unklar, wie viel Verhalten überprüft wurde
+  + ABER:
+    + Können engegen geewierkt werden
+
+### Proberty-based-Testing
+
++ Ziele
+  + automatische Auswahl der Test-Eingaben
+  + automatische Berechnung der erwarteten Ausgaben für gegebene Eingaben
++ Ansatz
+  + Propery (durch "Test-Orakel") programatische Ergebnisprüfung
+  + Automatische Eingabegenerierung
++ 2 Wege Propertyy based testen zu machen
+  + Eigenschaften von Ergebnissen testen
+  + Aletnative Berchnungen, Referenzimpelementierung
++ Uni-testing vs Propertybased Testing
+  + Unit Testing
+    + Einfcher Einstieg
+    + Nachvollziehbae konkrete Werte
+    + deterministische Ausführung
+    + ABER. Aufwand = #Tests
+  + Propery-based + Generatoren
+    + Hohe Automatiesierung
+    + Flexible Anpassung möglich
+    + "formale" Spezifikation
+    + ABER: abstrakte aber präzise Properties sind schwierig zu formulieren
+    + Evtl rechenaufwändig
+    
