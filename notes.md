@@ -1,6 +1,6 @@
 # FSV Vorlesung
 
-## 1. Vorlesung  
+## Vorlesung 1
 
 ### Motivation  
 
@@ -144,4 +144,48 @@ Fängt Regresseionen ab (neue Fehler)
     + "formale" Spezifikation
     + ABER: abstrakte aber präzise Properties sind schwierig zu formulieren
     + Evtl rechenaufwändig
-    
+
+## Vorlesung 3
+
+### Kontraollflussautomaten und -abdeckungsmaße
+
+ Haben eine Sysstematische Konstruktion
+
++ Knoten = Programmstellen ~ Programmzeilen
++ Kanten = Anweisung & Testes
++ Scleifen = Zyklen
+
+Coverage
+
++ Anweisungs überdeckung (statment coverage)
+  + verständlich
+  + messbar:tatsächliche und bestmögliche Abdeckung
+  + ABER: leine aussagen über funktionale Eigenschaften
+  + evtl 100% nicht ereichbar (dead code)
++ Zweigüberdeckung (branch coverage)
++ Pfadüberdeckung (Path coverage)
+  + sematisches Kriterium, genau die tatsächlich möglichen Ausfürungen
+  + Grundlage für beweisbare Korrektheit
+  + ABER: für die meisten systeme nicht erreichbar(Schelifen, Eingaben kann ins unedliche gehen)
+    + Lösung: "Alle Pfade der Länge x Abdecken"
+
+### Transitionen und Erreichbarkeit
+
+Syntax = statische Sicht  
+Semantik = dynamische Sicht  
+Spezifikation von Eigenschaften  
+
++ Invarianete = erwünschte Eigenschaft aller ereichbarer Zustände
++ insbesondere: Zielzustände/Fehlerzustände
+
+Verifikation
+
++ Erreichbarkeitsanalyse  durch expizites Aufzählen
+
+### Transistionssysteme
+
++ Fehlerstellen wollen nicht erreicht werden
++ Testen ob diese erreichbar sind
++ wenn Fehler gelten ist Programm fehlerhaft, wenn nicht dann ist es korrekt
++ Laufzeit: proportional zur Anzahl der erreichbaren Transitionen
++ Vollständigkeit: alle erreichbaren Zustände werden gefunden( wenn endlich erreichbar, ohne Beweis)
