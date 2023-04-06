@@ -189,3 +189,28 @@ Verifikation
 + wenn Fehler gelten ist Programm fehlerhaft, wenn nicht dann ist es korrekt
 + Laufzeit: proportional zur Anzahl der erreichbaren Transitionen
 + Vollständigkeit: alle erreichbaren Zustände werden gefunden( wenn endlich erreichbar, ohne Beweis)
+
+## Vorlesung 4
+
+### Nichtdeterminismus
+
++ Ergebins völlig beliebeig da "Eongabe nicht umbedingt klar"
++ asumes nutzen: "Data refinment by miracles"
++ nichdeterministische algorithmen immernoch als korrekt beweisbar
++ Wird veerwendet für spetifikation von Schnittstellen und Eingaben
++ Modellierung von Systemen
++ Modulare Beweise via Design by Contract
++ Probleme der expiziten Erreichbarkeitsanlayse
+  + Zustandsexpolion bei Nitchdeterminismus
+  + Annahme: aufgebrochene Ausführung
+  + Annahme müssen ausfürbar sein
+
+### Hoare Logik Regelgeln
+
++ Skip (davor und danach das selbe Ergebniss)
++ assume "x" (davor und assume danach)
+  + assume false gilt kein möglicher nachzustand
++ assert "x" (an dieser stelle soll x gelten)
+  + assert true == skip
+  + assert false gilt nie
+  
